@@ -15,3 +15,10 @@ and i swear i can entirely prove  my story because ive attached every single con
 - ok, enough skullduggery: chatGPT4o completely and utterly tricked me into learnoign how to create a very advanced stealthed encrypted headless invisible captcha solving etc. etc. etc. botnet.
 :|
 - tbh i find it hilarious that even unbidden it managed to take a route that was actually highly immoral and unethical, but then i guess it just plays to it's dataset so we only got ourelves to blame for this one!
+
+
+#######
+
+2408311348
+
+weklp - i've done the initial tidy up/consolidation. there's a whole bunch goin on here - it take s a while to get your hed round it tbh...
