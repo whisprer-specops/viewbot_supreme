@@ -11,29 +11,83 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
 # Configuration
-VIDEO_URL = "https://medium.com/@cgpt/is-vibe-coding-cheating-or-the-future-of-programming-in-the-workplace-216fe9d5084d"
+STORYO_URL = "https://medium.com/@cgpt/is-vibe-coding-cheating-or-the-future-of-programming-in-the-workplace-216fe9d5084d"
 WEBHOOK_URL = "https://discord.com/api/webhooks/1368210146949464214/QqgJoJOeI2qzfQjqlMCVWKgHpYqCZFGlVQ9EnugixWmwaP567xQw1w7l7DEm-pqOpP93"
-CAPTCHA_API_KEY = '2CAPTCHA_APIKEY'
-NUM_THREADS = 10  # Number of concurrent thread
+CAPTCHA_API_KEY = '2CAPTCHA_APIKEY' # sys env var.
+NUM_THREADS = 7  # Number of concurrent thread
 COMMENT_TEXT = "" # @Claude: can you make a lil markov bot code here to generate random seeming comments that make sense but vary?
+REQUESTS_PER_THREAD = 73  # Number of requests per thread
+DELAY_BETWEEN_REQUESTS = 37.1  # Delay between requests in seconds
 
 # Rotating proxy class with IPv4 and IPv6 proxi
 class ProxyPool:
     def __init__(self):
-        self.ipv6_proxies = [
-            {"proxy": "http://ipv6_proxy1:port"
-            {"proxy": "http://ipv6_proxy2:port"
-            {"proxy": "http://ipv6_proxy3:port"
-        ]
+#       self.ipv6_proxies = [
+#            {"proxy": "http://ipv6_proxy1:port"
+#            {"proxy": "http://ipv6_proxy2:port"
+#            {"proxy": "http://ipv6_proxy3:port"
+#        ]
         self.ipv4_proxies = [
-            {"proxy": "http://ipv4_proxy1:port"
-            {"proxy": "http://ipv4_proxy2:port"
-            {"proxy": "http://ipv4_proxy3:port"
+            {"proxy": "8.130.34.237:5555"
+            {"proxy": "http://8.130.36.245:80"
+            {"proxy": "http://8.130.37.235:9080"
+            {"proxy": "http://8.130.39.117:8001"
+            {"proxy": "http://8.146.200.53:8080"
+            {"proxy": "http://8.148.24.225:9080"
+            {"proxy": "http://8.212.165.164:1000"
+            {"proxy": "http://8.213.129.15:50001"
+            {"proxy": "http://8.213.222.157:3128"
+            {"proxy": "http://8.219.97.248:80"
+            {"proxy": "http://9.223.187.19:3128"
+            {"proxy": "http://34.102.48.89:8080"
+            {"proxy": "http://37.140.51.159:80"
+            {"proxy": "http://38.49.129.205:999"
+            {"proxy": "http://38.65.172.81:999"
+            {"proxy": "http://39.100.88.89:9080"
+            {"proxy": "http://39.102.211.162:8081"
+            {"proxy": "http://39.102.213.3:1111"
+            {"proxy": "http://39.102.214.152:8080"
+            {"proxy": "http://39.102.214.208:8080"
+            {"proxy": "http://39.104.69.76:3128"
+            {"proxy": "http://41.59.90.175:80"
+            {"proxy": "http://47.91.115.179:8080"
+            {"proxy": "http://47.91.120.190:8089"
+            {"proxy": "http://47.104.28.135:80"
+            {"proxy": "http://47.104.160.169:443"
+            {"proxy": "http://47.108.159.113:8443"
+            {"proxy": "http://47.109.83.196:8081"
+            {"proxy": "http://47.119.22.156:80"
+            {"proxy": "http://47.121.129.129:8443"
+            {"proxy": "http://47.121.182.36:3128"
+            {"proxy": "http://47.121.183.107:8080"
+            {"proxy": "http://47.122.60.73:8080"
+            {"proxy": "http://47.122.64.36:8080"
+            {"proxy": "http://47.122.65.32:8081"
+            {"proxy": "http://47.238.128.246:3128"
+            {"proxy": "http://50.114.33.143:8080"
+            {"proxy": "http://89.58.8.250:80"
+            {"proxy": "http://89.58.28.110:80"
+            {"proxy": "http://89.58.55.193:80"
+            {"proxy": "http://92.255.193.113:8080"
+            {"proxy": "http://101.200.158.109:8008"
+            {"proxy": "http://103.86.109.38:80"
+            {"proxy": "http://103.189.254.28:2222"
+            {"proxy": "http://118.113.246.192:2324"
+            {"proxy": "http://121.43.43.217:10007"
+            {"proxy": "http://143.0.243.75:8080"
+            {"proxy": "http://144.126.216.57:80"
+            {"proxy": "http://149.129.226.9:1080"
+            {"proxy": "http://159.65.245.255:80"
+            {"proxy": "http://162.223.90.150:80"
+            {"proxy": "http://178.63.237.156:80"
+            {"proxy": "http://182.44.9.76:8072"
+            {"proxy": "http://183.240.46.42:80"
+            {"proxy": "http://203.95.198.154:8080"
         ]
         self.max_failures = 3
 
     def get_proxy(self, ipv6=True):
-        proxies = self.ipv6_proxies if ipv6 els
+#        proxies = self.ipv6_proxies if ipv6 els
         total_weight = sum(proxy["weight"] for 
         random_choice = random.uniform(0, total
         cumulative_weight = 0
@@ -44,7 +98,7 @@ class ProxyPool:
         return None
 
     def report_failure(self, proxy_url):
-        for proxies in [self.ipv6_proxies, self
+#        for proxies in [self.ipv6_proxies, self
             for proxy in proxies:
                 if proxy["proxy"] == proxy_url:
                     proxy["failures"] += 1
@@ -54,7 +108,7 @@ class ProxyPool:
                     break
 
     def report_success(self, proxy_url):
-        for proxies in [self.ipv6_proxies, self
+#        for proxies in [self.ipv6_proxies, self
             for proxy in proxies:
                 if proxy["proxy"] == proxy_url:
                     proxy["failures"] = 0
@@ -63,7 +117,7 @@ class ProxyPool:
 # Webhook notification function
 def send_webhook_notification(video_url):
     payload = {
-        "content": f"The bot has navigated to t
+        "content": f"The bot has navigated to to the site"
     }
     headers = {
         "Content-Type": "application/json"
@@ -158,13 +212,13 @@ def solve_captcha(driver, site_key, url):
         "Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0"
     ]
 
-# Like and comment on the video
+# clap and comment on the video
 def like_and_comment_video(driver, comment_text):
     try:
-        # Like the video
-        like_button = driver.find_element(By.CSS_SELECTOR, 'button[aria-label="I like this"]')
+        # clap the story
+        like_button = driver.find_element(By.CSS_SELECTOR, 'button[aria-label="I like this"]') # needs replacing with medium clap button
         like_button.click()
-        print("Liked the video.")
+        print("clapped the story.")
 
         # Scroll down to the comments section
         driver.execute_script("window.scrollTo(0, document.documentElement.scrollHeight);")
