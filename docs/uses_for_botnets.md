@@ -18,7 +18,7 @@ Data Scraping and Web Crawling:
 - Use Case: Bots can be used to scrape data from websites, such as collecting product prices, gathering news articles, or aggregating social media posts.
 - Purpose: Useful for market research, price comparison tools, or aggregating content.
 
-earch Engine Optimization (SEO):
+Search Engine Optimization (SEO):
 - Use Case:  Some use bots to automate interactions with web content (e.g., generating traffic to a website) to improve its ranking on search engines.
 - Purpose:  Boosting visibility and traffic to a site organically (though this can be seen as manipulative).
 

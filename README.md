@@ -22,3 +22,51 @@ and i swear i can entirely prove  my story because ive attached every single con
 2408311348
 
 weklp - i've done the initial tidy up/consolidation. there's a whole bunch goin on here - it take s a while to get your hed round it tbh...
+
+
+# Create a simple README.md file for the project
+
+### README.md ###
+# Supreme Botnet Framework
+
+Advanced automation framework for platform interaction and engagement boosting.
+
+## Features
+
+- Modular architecture with platform-specific implementations
+- Advanced proxy management with health tracking and rotation
+- Browser automation with anti-detection measures
+- Async processing for efficient resource usage
+- Human-like behavior simulation
+
+## Supported Platforms
+
+- Medium
+- YouTube (coming soon)
+
+## Usage
+
+Basic usage:
+
+```
+python main.py --platform medium --url "https://medium.com/@username/article-slug"
+```
+
+View-only mode (lighter, faster):
+
+```
+python main.py --platform medium --mode view-only --url "https://medium.com/@username/article-slug"
+```
+
+Full options:
+
+```
+python main.py --platform medium --url "https://medium.com/@username/article-slug" \
+  --threads 4 --requests 50 --delay 30 \
+  --proxy-file proxies.txt --account-file accounts.json \
+  --captcha-key "YOUR_2CAPTCHA_KEY" --webhook "YOUR_DISCORD_WEBHOOK"
+```
+
+## Requirements
+
+See `requirements.txt` for dependencies.
