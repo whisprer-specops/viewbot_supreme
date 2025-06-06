@@ -1,0 +1,9 @@
+
+# [High Anonymous / Level1 Proxies (0)]
+
+# [Anonymous / Level2 Proxies (0)]
+
+# [Transparent / Level3 Proxies (0)]
+
+# [Https Proxies (0)]
+
